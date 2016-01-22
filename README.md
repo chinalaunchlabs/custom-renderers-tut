@@ -61,3 +61,27 @@ namespace CustomRenderersTut.Droid
 * `Element`
 	* reference to the Xamarin.Forms subclassed element (eg. `CustomButton`)
 	* Xamarin.Forms element properties are available here
+
+## Elements, Their Renderers and Platform-Specific Elements
+Xamarin.Forms | Renderer | Android | iOS
+------------- | -------- | ------- | ----
+ContentPage	  | PageRenderer | ViewGroup | UIView
+Label | LabelRenderer | TextView | UILabel
+Button | ButtonRenderer | Button | UIButton
+Entry | EntryRenderer | EditText | UITextField
+Image | ImageRenderer | ImageView | UIImageView
+BoxView | BoxRenderer | ViewGroup | CGContext
+ScrollView | ScrollViewRenderer | ScrollView | UIScrollView
+Frame | FrameRenderer | Drawable | UIView
+Picker | PickerRenderer | TextView, AlertDialog, NumberPicker | UIPickerView, UIPickerViewModel, UIToolbar, UIBarButtonItems, UITextField
+DatePicker, TimePicker | Date/TimePickerRenderer | TextView, AlertDialog | UIDatePicker, UIToolbar, UITextField, UIBarButtonItems
+Stepper | StepperRenderer | LinearLayout, Button | UIStepper
+Slider | SliderRenderer | SeekBar | UISlider 
+Switch | SwitchRenderer | Switch | UISwitch 
+ListView | ListViewRenderer | (not yet available) | UITableView
+TextCell | TextCellRenderer | LinearLayout, TextView, ImageView | UITableViewCell
+EntryCell | EntryCellRenderer | LinearLayout, TextView, EditText | UITableViewCell, UITextField
+SwitchCell | SwitchCellRenderer | Switch | UITableViewCell, UISwitch
+ImageCell | ImageCellRenderer | TextView, ImageView | UITableViewCell, UIImage
+NavigationPage | TabbedRenderer | (none with view pages) | UIViewController, UIView
+CarouselPage | CarouselPageRenderer | View | UIScrollView
